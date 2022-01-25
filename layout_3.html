@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-3</title>
+    <style>
+        @media screen and (max-width: 1600px) {
+            .outer-container{
+                display: grid;
+                grid-row-gap: 30px;
+                grid-column-gap: 30px;
+                margin: 20px;
+            }
+            .navigation{
+                background-color: yellow;
+                grid-area: 1 / 1 / span 1 / span 4;
+            }
+            .left-box{
+                background-color: red;
+                grid-area: 2 / 1 / span 6 / span 3;
+                height: 540px;
+            }
+            .right-box1{
+                background-color: rgb(28, 197, 28);
+                grid-area: 2 / 4 / span 1 / span 1 ;
+                height: 160px;
+            }
+            .right-box2{
+                background-color: rgb(28, 197, 28);
+                height: 160px;
+                grid-area: 3 / 4 / span 1 / span 1;
+            }
+            .right-box3{
+                background-color:rgb(28, 197, 28);
+                height: 160px;
+                grid-area: 4 / 4 / span 1 / span 1;
+            }
+            .box{
+                padding-left: 10px;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .navigation{
+                grid-area: 1 / 1 / span 1 / span 3;
+            }
+            .right-box1{
+                grid-area: 8 / 1 / span 1 / span 1;
+                
+            }
+            .right-box2{
+                grid-area: 8 / 2 / span 1 / span 1;
+                
+            }
+            .right-box3{
+                grid-area: 8 / 3 / span 1 / span 1;
+            }
+            .left-box{
+                grid-area: 2 / 1 / span 6 / span 3;
+                height: 300px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .navigation{
+                grid-area: 1 / 1 / span 1 / span 1;
+                height: 60px;
+                font-size:small;
+            }
+            .left-box{
+                grid-area: 2 / 1 / span 3 / span 1 ;
+                height: 200px;
+            }
+            .right-box1{
+                grid-area: 5 / 1 / span 2 / span 1;
+            }
+            .right-box2{
+                grid-area: 7 / 1 / span 2 / span 1;
+            }
+            .right-box3{
+                grid-area: 9 / 1 / span 2 / span 1;
+            }
+            .right-box1, .right-box2, .right-box3{
+                height: 110px;
+                margin-top: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="navigation box">
+            <h1>Navigation</h1>
+        </div>
+        <div class="left-box box">
+            <h2>LEFT BOX</h2>
+        </div>
+        <div class="right-box1 box">
+            <h2>RIGHT BOX 1</h2>
+        </div>
+        <div class="right-box2 box">
+            <h2>RIGHT BOX 2</h2>
+        </div>
+        <div class="right-box3 box">
+            <h2>RIGHT BOX 3</h2>
+        </div>
+    </div>
+</body>
+</html>
